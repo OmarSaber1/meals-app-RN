@@ -4,7 +4,7 @@ import CategoriesScreen from "./screens/CategoriesScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import "react-native-gesture-handler";
-import MealOverView from "./screens/MealOverView";
+import MealOverView from "./screens/MealsOverView";
 
 const Stack = createStackNavigator();
 
@@ -15,7 +15,7 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name='MealsCategories' component={CategoriesScreen} />
-          <Stack.Screen name='MealOverView' component={MealOverView} />
+          <Stack.Screen name='MealsOverView' component={MealOverView} />
         </Stack.Navigator>
       </NavigationContainer>
     </>
