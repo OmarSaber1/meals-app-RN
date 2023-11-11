@@ -8,13 +8,10 @@ import MealItem from "../components/MealItem";
 function MealsOverView({ navigation, options, back }) {
   const route = useRoute();
   const category = route.params.category;
-  console.log({ category });
 
   const meals = MEALS.filter((meal) =>
     meal.categoryIds.some((categoryId) => categoryId == category.id)
   );
-
-  console.log(meals.length);
 
   return (
     <View style={styles.container}>
