@@ -1,15 +1,9 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import {
-  View,
-  Text,
-  Image,
-  StyleSheet,
-  TouchableOpacity,
-  Pressable,
-} from "react-native";
+import { View, Text, Image, StyleSheet, Pressable } from "react-native";
 
 const MealCard = ({ item, onSelect }) => {
-  console.log({ item });
+  console.log({ onSelect });
   return (
     <View>
       <Pressable android_ripple={{ color: "#CCC" }} onPress={onSelect}>

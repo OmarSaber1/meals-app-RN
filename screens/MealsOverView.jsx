@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useRoute } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import { StyleSheet, View, Text, FlatList } from "react-native";
 import { MEALS, CATEGORIES } from "../data/dummy-data";
 import MealItem from "../components/MealItem";
@@ -25,7 +25,13 @@ function MealsOverView({ navigation, options, back }) {
     <View style={styles.container}>
       <FlatList
         data={meals}
-        renderItem={MealItem}
+        renderItem={(data) =>
+          MealItem({
+            ...data,
+            onSelect: () =>
+              navigation.navigate("MealScreen", { meal: data.item }),
+          })
+        }
         keyExtractor={(item) => item.id}
       />
     </View>

@@ -5,6 +5,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import "react-native-gesture-handler";
 import MealOverView from "./screens/MealsOverView";
+import MealScreen from "./screens/MealScreen";
 
 const Stack = createStackNavigator();
 
@@ -36,6 +37,16 @@ export default function App() {
             // }}
             name='MealsOverView'
             component={MealOverView}
+          />
+          <Stack.Screen
+            // options={({ route }) => {
+            //   const catId = route.params.category.title;
+            //   return {
+            //     title: catId,
+            //   };
+            // }}
+            name='MealScreen'
+            component={MealScreen}
           />
         </Stack.Navigator>
       </NavigationContainer>
