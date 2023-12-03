@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import { useNavigation, useRoute } from "@react-navigation/native";
-import { StyleSheet, View, Text, FlatList } from "react-native";
+import { useRoute } from "@react-navigation/native";
+import { StyleSheet, View, FlatList } from "react-native";
 import { MEALS, CATEGORIES } from "../data/dummy-data";
 import MealItem from "../components/MealItem";
 
 // function MealOverView({ navigation, route, options, back }) {
-function MealsOverView({ navigation, options, back }) {
+function MealsOverView({ navigation }) {
   const route = useRoute();
   const category = route.params.category;
 

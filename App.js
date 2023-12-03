@@ -47,6 +47,10 @@ export default function App() {
             // }}
             name='MealScreen'
             component={MealScreen}
+            options={{
+              cardStyle: { backgroundColor: "white" },
+              presentation: "modal",
+            }}
           />
         </Stack.Navigator>
       </NavigationContainer>
